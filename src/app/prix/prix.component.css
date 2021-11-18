@@ -1,0 +1,16 @@
+div.prix {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+  div.prix h3{
+    font-size: 24px;
+    color: #0328A1;
+  }
+
+  div.prix p{
+    margin-top: -20px;
+    
+  }
+  div.prix p span {
+    text-decoration: line-through;
+  }
