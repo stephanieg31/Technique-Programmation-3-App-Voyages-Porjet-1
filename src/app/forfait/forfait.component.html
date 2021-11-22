@@ -1,1 +1,38 @@
-<p>forfait works!</p>
+
+
+<div class="forfait"  *ngIf="leforfait">
+
+  <mat-card class="example-card">
+    <mat-card-title-group>
+      <mat-card-title> 
+
+        <app-forfait-vedette [enVedette]="leforfait.enVedette" > </app-forfait-vedette>
+        <app-destination [destination]="leforfait.destination">  </app-destination> 
+        <app-prix [prix]="leforfait.prix"  > </app-prix>
+        <app-prix-rabais [rabais]="leforfait.rabais"  > </app-prix-rabais>
+        
+        <app-etoiles ></app-etoiles>
+        <app-avis [nombreAvis]="leforfait.nombreAvis"> </app-avis>     
+        
+
+      </mat-card-title>   
+
+      <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+    </mat-card-title-group>
+
+    <mat-card-content>
+      <app-nom-hotel [nomHotel]="leforfait.nomHotel"> </app-nom-hotel> 
+      <app-description-voyage [description]="leforfait.description"> </app-description-voyage>
+
+      <app-sejour [nbrJours]="leforfait.nbrJours" ></app-sejour>
+      <app-date-depart [dateDepart]="leforfait.dateDepart" ></app-date-depart>
+      <app-date-retour [dateRetour]="leforfait.dateRetour" ></app-date-retour>
+      
+      
+      
+    </mat-card-content>
+  </mat-card>
+  
+
+
+</div>

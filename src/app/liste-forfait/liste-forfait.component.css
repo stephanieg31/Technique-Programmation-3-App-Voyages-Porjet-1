@@ -1,0 +1,7 @@
+.example-card {
+  max-width: 400px;
+  margin-bottom: 8px;
+  margin: 20px;
+  float:left;
+  clear: both;
+}

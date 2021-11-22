@@ -1,5 +1,8 @@
-div.nomHotel {
+div.nomHotel h3{
+  clear: both;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
   color: #0328A1;
   text-transform: uppercase;
+  font-weight: 900;
 }

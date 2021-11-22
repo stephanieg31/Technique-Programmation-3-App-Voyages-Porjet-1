@@ -6,8 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./destination.component.css']
 })
 export class DestinationComponent implements OnInit {
+  
   @Input() destination:string = " ";
-  @Input() villeDepart:string = " ";
+ 
 
   constructor() { }
 

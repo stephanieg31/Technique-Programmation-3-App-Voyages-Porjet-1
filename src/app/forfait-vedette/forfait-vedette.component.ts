@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-forfait-vedette',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forfait-vedette.component.css']
 })
 export class ForfaitVedetteComponent implements OnInit {
+  @Input() enVedette = true; 
 
   constructor() { }
 

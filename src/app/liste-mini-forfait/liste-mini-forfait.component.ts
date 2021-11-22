@@ -16,7 +16,7 @@ export class ListeMiniForfaitComponent implements OnInit {
 
   miniforfaits : MiniForfait [] = MINIFORFAIT;
 
-  @Input() enVedette = true; 
+  @Input() enVedette : boolean = true; 
 
   constructor() { }
 

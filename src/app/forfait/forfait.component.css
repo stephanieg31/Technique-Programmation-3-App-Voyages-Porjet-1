@@ -1,0 +1,8 @@
+.example-card {
+  min-width: 800px;
+  max-width: 800px;
+  margin-bottom: 8px;
+  margin: 20px;
+  float:left;
+  clear: both;
+}

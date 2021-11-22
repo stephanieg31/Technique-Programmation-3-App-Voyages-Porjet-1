@@ -14,6 +14,23 @@ import { NomHotelComponent } from './nom-hotel/nom-hotel.component';
 import { SejourComponent } from './sejour/sejour.component';
 import { PrixComponent } from './prix/prix.component';
 import { ForfaitVedetteComponent } from './forfait-vedette/forfait-vedette.component';
+import { IconeEtoileComponent } from './icone-etoile/icone-etoile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatIconModule} from '@angular/material/icon';
+import { ListeForfaitComponent } from './liste-forfait/liste-forfait.component';
+import {MatCardModule} from '@angular/material/card';
+import { DateDepartComponent } from './date-depart/date-depart.component';
+import { VilleDepartComponent } from './ville-depart/ville-depart.component';
+import { DateRetourComponent } from './date-retour/date-retour.component';
+import { DescriptionVoyageComponent } from './description-voyage/description-voyage.component';
+import { AvisComponent } from './avis/avis.component';
+import { PhotoVoyageComponent } from './photo-voyage/photo-voyage.component';
+import { PrixRabaisComponent } from './prix-rabais/prix-rabais.component';
+
+import {MatListModule} from '@angular/material/list';
+
+
 
 @NgModule({
   declarations: [
@@ -28,12 +45,29 @@ import { ForfaitVedetteComponent } from './forfait-vedette/forfait-vedette.compo
     NomHotelComponent,
     SejourComponent,
     PrixComponent,
-    ForfaitVedetteComponent
+    ForfaitVedetteComponent,
+    IconeEtoileComponent,
+    ListeForfaitComponent,
+    DateDepartComponent,
+    VilleDepartComponent,
+    DateRetourComponent,
+    DescriptionVoyageComponent,
+    AvisComponent,
+    PhotoVoyageComponent,
+    PrixRabaisComponent,
+   
   ],
+
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatCardModule,
+    MatListModule,
+    
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

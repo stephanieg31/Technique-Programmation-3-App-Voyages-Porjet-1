@@ -1,9 +1,4 @@
 div.sejour {  
-  background-color: azure;
-  border-style: solid;
-  border-width: 3px;
-  border-color: #3A78E4;
-  width: 340px; 
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
+  clear: both;
+ 
 }

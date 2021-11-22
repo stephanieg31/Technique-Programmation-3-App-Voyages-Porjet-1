@@ -8,6 +8,10 @@ export interface MiniForfait {
   prix : number;
   rabais : number;
   dateDepart : string;
+  dateRetour : string
   nbrJours : number;
-  enVedette : boolean
+  enVedette : boolean;
+  photoVoyage : string;
+  description : string;
+  nombreAvis : number;
 }

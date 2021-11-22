@@ -13,6 +13,7 @@ import { MiniForfait } from "../mini-forfait";
 export class MiniForfaitComponent implements OnInit {
 
   @Input() miniforfait? : MiniForfait;  
+ 
 
   constructor() { }
 

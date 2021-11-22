@@ -1,0 +1,12 @@
+div.descriptionVoyage {
+  clear: both;
+  font-size: 15px;
+}
+
+div.descriptionVoyage h3{
+  font-weight: bold;
+}
+
+div.descriptionVoyage p{
+  margin-top: -15px;
+}

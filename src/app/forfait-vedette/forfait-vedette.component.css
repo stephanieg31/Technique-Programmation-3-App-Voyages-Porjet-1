@@ -1,0 +1,9 @@
+div.vedette {
+  text-align: center;  
+}
+
+.text-success {
+  font-size: 25px;
+  font-weight: 900;  
+  color: red;
+}
