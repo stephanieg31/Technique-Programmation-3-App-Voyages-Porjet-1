@@ -1,11 +1,12 @@
 <!-- COMPOSANT POUR L'AFFICHAE DES ÉTOILES -->
 
 <div class="etoiles">
-<div *ngFor ="let etoile of []. constructor (5); let i = index"> 
-  
-  <app-icone-etoile> </app-icone-etoile> 
-  
-</div>
+ 
+  <div *ngFor ="let etoile of []. constructor (etoiles);"> 
+    
+    <mat-icon aria-hidden="false" aria-label="Example home icon">grade</mat-icon>
+    
+  </div>
 
 </div>
 

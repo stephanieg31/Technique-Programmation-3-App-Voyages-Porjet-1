@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ForfaitService } from '../forfait.service';
 
 import { MiniForfait } from "../mini-forfait";
 /* Importation de mon interface */
@@ -15,9 +16,20 @@ export class ListeForfaitComponent implements OnInit {
 
   lesforfaits : MiniForfait [] = MINIFORFAIT;
 
-  constructor() { }
+  constructor(private forfaitService: ForfaitService) { }
 
-  ngOnInit(): void {
-  }
+ ngOnInit(): void {
+   this.getForfaits();
+ }
 
+ getForfaits(): void {
+   this.forfaitService.getForfaits()
+       .subscribe(resultat => this.lesforfaits = resultat);
+ }
 }
+
+
+
+
+
+

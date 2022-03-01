@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PrixComponent implements OnInit {
 
   @Input() prix:number = 0;
+  @Input() rabais:number = 0;
 
   constructor() { }
 

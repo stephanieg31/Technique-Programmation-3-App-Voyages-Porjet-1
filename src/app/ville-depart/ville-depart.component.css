@@ -2,4 +2,8 @@ div.villeDepart {
   clear: both;
   margin-top: -15px;
   float: left;
+  color: white;    
+  text-transform: uppercase; 
 }
+
+

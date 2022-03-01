@@ -1,0 +1,13 @@
+div.navigation {
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  height: 50px;
+}
+
+a{
+  margin-top: 20px;
+  padding : 10px;
+  text-decoration: none;
+  color: aliceblue;
+}

@@ -7,14 +7,12 @@ import { MiniForfaitComponent } from './mini-forfait/mini-forfait.component';
 import { ForfaitComponent } from './forfait/forfait.component';
 import { EtoilesComponent } from './etoiles/etoiles.component';
 import { FormulaireGestionForfaitsComponent } from './formulaire-gestion-forfaits/formulaire-gestion-forfaits.component';
-import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
+
 import { DestinationComponent } from './destination/destination.component';
 import { ListeMiniForfaitComponent } from './liste-mini-forfait/liste-mini-forfait.component';
 import { NomHotelComponent } from './nom-hotel/nom-hotel.component';
-import { SejourComponent } from './sejour/sejour.component';
 import { PrixComponent } from './prix/prix.component';
 import { ForfaitVedetteComponent } from './forfait-vedette/forfait-vedette.component';
-import { IconeEtoileComponent } from './icone-etoile/icone-etoile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatIconModule} from '@angular/material/icon';
@@ -26,9 +24,32 @@ import { DateRetourComponent } from './date-retour/date-retour.component';
 import { DescriptionVoyageComponent } from './description-voyage/description-voyage.component';
 import { AvisComponent } from './avis/avis.component';
 import { PhotoVoyageComponent } from './photo-voyage/photo-voyage.component';
-import { PrixRabaisComponent } from './prix-rabais/prix-rabais.component';
+
 
 import {MatListModule} from '@angular/material/list';
+import { HttpClientModule } from '@angular/common/http'; 
+import { ForfaitService } from './forfait.service';
+import { NavigationComponent } from './navigation/navigation.component';
+import { TableForfaitsComponent } from './table-forfaits/table-forfaits.component';
+import { FormulaireForfaitsComponent } from './formulaire-forfaits/formulaire-forfaits.component';
+import { FormsModule } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import {MatButtonModule} from '@angular/material/button';
+import { ForfaitCanadaPipe } from './forfait-canada.pipe';
+import { ForfaitCanadaComponent } from './forfait-canada/forfait-canada.component';
+import { AproposComponent } from './apropos/apropos.component';
+import { ForfaitParisPipe } from './forfait-paris.pipe';
+import { ForfaitParisComponent } from './forfait-paris/forfait-paris.component';
+import { NgChartsModule } from 'ng2-charts';
+import { Graphique1Component } from './graphique1/graphique1.component';
+import { GraphiquesComponent } from './graphiques/graphiques.component';
+import { Graphique2Component } from './graphique2/graphique2.component';
+
+
 
 
 
@@ -38,23 +59,20 @@ import {MatListModule} from '@angular/material/list';
     MiniForfaitComponent,
     ForfaitComponent,
     EtoilesComponent,
-    FormulaireGestionForfaitsComponent,
-    FormulaireRechercheComponent,
+    FormulaireGestionForfaitsComponent,    
     DestinationComponent,
     ListeMiniForfaitComponent,
-    NomHotelComponent,
-    SejourComponent,
+    NomHotelComponent,    
     PrixComponent,
-    ForfaitVedetteComponent,
-    IconeEtoileComponent,
+    ForfaitVedetteComponent,    
     ListeForfaitComponent,
     DateDepartComponent,
     VilleDepartComponent,
     DateRetourComponent,
     DescriptionVoyageComponent,
     AvisComponent,
-    PhotoVoyageComponent,
-    PrixRabaisComponent,
+    PhotoVoyageComponent, 
+    NavigationComponent, TableForfaitsComponent, FormulaireForfaitsComponent, AcceuilComponent, ForfaitCanadaPipe, ForfaitCanadaComponent, AproposComponent, ForfaitParisPipe, ForfaitParisComponent, Graphique1Component, GraphiquesComponent, Graphique2Component,   
    
   ],
 
@@ -65,10 +83,16 @@ import {MatListModule} from '@angular/material/list';
     MatIconModule,
     MatCardModule,
     MatListModule,
-    
+    HttpClientModule,
+    FormsModule,
+    MatTableModule, 
+    MatFormFieldModule,
+    MatInputModule, 
+    MatDialogModule, 
+    MatButtonModule, NgChartsModule,
   ],
 
-  providers: [],
+  providers: [ForfaitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

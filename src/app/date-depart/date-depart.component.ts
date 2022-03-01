@@ -8,6 +8,8 @@ import { Component,Input, OnInit } from '@angular/core';
 export class DateDepartComponent implements OnInit {
 
   @Input() dateDepart:string = " ";
+  @Input() nbrJours:number = 0;
+  
   constructor() { }
 
   ngOnInit(): void {

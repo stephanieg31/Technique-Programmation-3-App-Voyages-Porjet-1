@@ -1,9 +1,12 @@
 div.vedette {
+  clear: both;
+  display: block;
+  background-color: #c1c025;
   text-align: center;  
 }
 
 .text-success {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 900;  
-  color: red;
+  color: #646464
 }

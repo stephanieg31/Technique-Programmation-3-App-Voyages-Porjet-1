@@ -7,7 +7,7 @@ import { Component,Input, OnInit } from '@angular/core';
 })
 export class DescriptionVoyageComponent implements OnInit {
 
-  @Input() description : string = " ";
+  @Input() caracteristiques :string[]=[] ;
 
   constructor() { }
 

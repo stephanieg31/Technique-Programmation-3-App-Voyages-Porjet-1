@@ -1,17 +1,20 @@
 export interface MiniForfait {
-
-  id : number;
+  id :string;
   destination : string;
   villeDepart : string;
-  nomHotel : string;
-  etoiles :number;
+  hotel : {
+    nomHotel : string;
+    adresse : string; 
+    etoiles :number;
+    nbrChambres : number;  
+  }, 
+  caracteristiques : string[], 
   prix : number;
   rabais : number;
   dateDepart : string;
-  dateRetour : string
-  nbrJours : number;
-  enVedette : boolean;
-  photoVoyage : string;
-  description : string;
-  nombreAvis : number;
+  dateRetour : string;
+  nbrJours : number; 
+  vedette : boolean;
+  photoVoyage : string;   
+  nombreAvis : number;    
 }

@@ -6,7 +6,7 @@ import { Component,Input, OnInit } from '@angular/core';
   styleUrls: ['./forfait-vedette.component.css']
 })
 export class ForfaitVedetteComponent implements OnInit {
-  @Input() enVedette = true; 
+  @Input() vedette = true; 
 
   constructor() { }
 

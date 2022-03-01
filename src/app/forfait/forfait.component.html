@@ -6,12 +6,17 @@
     <mat-card-title-group>
       <mat-card-title> 
 
-        <app-forfait-vedette [enVedette]="leforfait.enVedette" > </app-forfait-vedette>
-        <app-destination [destination]="leforfait.destination">  </app-destination> 
-        <app-prix [prix]="leforfait.prix"  > </app-prix>
-        <app-prix-rabais [rabais]="leforfait.rabais"  > </app-prix-rabais>
+        <div class="forvedette">
+          <app-forfait-vedette [vedette]="leforfait.vedette" > </app-forfait-vedette>
+        </div>
         
-        <app-etoiles ></app-etoiles>
+        <app-destination [destination]="leforfait.destination">  </app-destination>
+        <app-nom-hotel [nomHotel]="leforfait.hotel.nomHotel"> </app-nom-hotel> 
+
+        <app-prix [prix]="leforfait.prix" [rabais]="leforfait.rabais" > </app-prix>
+        
+        
+       <app-etoiles [etoiles]="leforfait.hotel.etoiles">    </app-etoiles>
         <app-avis [nombreAvis]="leforfait.nombreAvis"> </app-avis>     
         
 
@@ -21,11 +26,11 @@
     </mat-card-title-group>
 
     <mat-card-content>
-      <app-nom-hotel [nomHotel]="leforfait.nomHotel"> </app-nom-hotel> 
-      <app-description-voyage [description]="leforfait.description"> </app-description-voyage>
+      
+      <app-description-voyage [caracteristiques]="leforfait.caracteristiques"> </app-description-voyage>
 
-      <app-sejour [nbrJours]="leforfait.nbrJours" ></app-sejour>
-      <app-date-depart [dateDepart]="leforfait.dateDepart" ></app-date-depart>
+     
+      <app-date-depart [dateDepart]="leforfait.dateDepart" [nbrJours]="leforfait.nbrJours" ></app-date-depart>
       <app-date-retour [dateRetour]="leforfait.dateRetour" ></app-date-retour>
       
       

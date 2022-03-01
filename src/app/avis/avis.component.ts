@@ -1,4 +1,6 @@
 import { Component,Input, OnInit } from '@angular/core';
+import { MiniForfait} from '../mini-forfait'; /* INTERFACE */
+import { ForfaitService } from '../forfait.service'; /* SERVICE*/
 
 @Component({
   selector: 'app-avis',
@@ -6,13 +8,20 @@ import { Component,Input, OnInit } from '@angular/core';
   styleUrls: ['./avis.component.css']
 })
 export class AvisComponent implements OnInit {
+  forfaits: MiniForfait[] = [];
 
-  @Input() nombreAvis:number = 0;
+ @Input() nombreAvis:number = 0;
   
 
-  constructor() { }
+   constructor(private forfaitService: ForfaitService) { }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    this.getForfaits();
+  }
+
+  getForfaits(): void {
+    this.forfaitService.getForfaits()
+      .subscribe(resultat => this.forfaits = resultat);
   }
 
 }

@@ -1,6 +1,10 @@
 div.dateDepart{
   clear: both;
   float: left;
-  margin-right: 20px;
+  margin-right: 20px;  
+}
 
+  div.dateDepart p {
+    color: white;    
+    text-transform: uppercase; 
 }

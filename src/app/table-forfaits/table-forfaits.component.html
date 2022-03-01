@@ -1,0 +1,86 @@
+<!-- MON TABLEAU POUR AFFICHER MES FORFAITS -->
+<table mat-table #tableForfaits [dataSource]="forfaits">
+
+
+<!-- SOUS FORMULAIRE EDITION-SUPPRESION -->
+    <ng-container matColumnDef="destination">
+        <th mat-header-cell *matHeaderCellDef> Destination </th>
+        <td mat-cell *matCellDef="let forfait">
+            <form #forfaitFormEdition="ngForm" id="forfaitFormEdition" (ngSubmit)="forfaitFormEdition.form.valid && onEdit(forfaitFormEdition)">
+                <mat-form-field *ngIf="(selectedForfait && selectedForfait === forfait);else editDestination;" class="input-full-width">
+                    <input name="selectedForfaitDestination" [(ngModel)]="selectedForfait.destination" matInput required minlength="2"  maxlength="50" name="destinationEdition" #destinationEdition="ngModel">
+                    <mat-error *ngIf="destinationEdition.invalid && (destinationEdition.dirty || destinationEdition.touched) &&  destinationEdition.hasError('required')">La destination est obligatoire.</mat-error>
+                </mat-form-field>
+            </form>
+            <ng-template #editDestination><span (click)="onSelect(forfait)">{{forfait.destination}}</span></ng-template>
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nomHotel">
+        <th mat-header-cell *matHeaderCellDef> Nom de l'hôtel </th>
+        <td mat-cell *matCellDef="let forfait">
+            <form #forfaitFormEdition="ngForm" id="forfaitFormEdition" (ngSubmit)="forfaitFormEdition.form.valid && onEdit(forfaitFormEdition)">
+                <mat-form-field *ngIf="(selectedForfait && selectedForfait === forfait);else editHotel;" class="input-full-width">
+                    <input name="selectedForfaitHotel" [(ngModel)]="selectedForfait.hotel.nomHotel" matInput required minlength="2"  maxlength="50" name="nomHotelEdition" #nomHotelEdition="ngModel">
+                    <mat-error *ngIf="nomHotelEdition.invalid && (nomHotelEdition.dirty || nomHotelEdition.touched) &&  nomHotelEdition.hasError('required')">Le nom de l'hôtel est obligatoire.</mat-error>
+                </mat-form-field>
+            </form>
+            <ng-template #editHotel><span (click)="onSelect(forfait)">{{forfait.hotel.nomHotel}}</span></ng-template>
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="prix">
+        <th mat-header-cell *matHeaderCellDef> Prix </th>
+        <td mat-cell *matCellDef="let forfait">
+            <form #forfaitFormEdition="ngForm" id="forfaitFormEdition" (ngSubmit)="forfaitFormEdition.form.valid && onEdit(forfaitFormEdition)">
+                <mat-form-field *ngIf="(selectedForfait && selectedForfait === forfait);else editPrix;" class="input-full-width">
+                    <input name="selectedForfaitPrix" [(ngModel)]="selectedForfait.prix" matInput required minlength="2"  maxlength="50" name="prixEdition" #prixEdition="ngModel">
+                    <mat-error *ngIf="prixEdition.invalid && (prixEdition.dirty || prixEdition.touched) &&  prixEdition.hasError('required')">Le prix est obligatoire.</mat-error>
+                </mat-form-field>
+            </form>
+            <ng-template #editPrix><span (click)="onSelect(forfait)">{{forfait.prix}}</span></ng-template>
+        </td>
+    </ng-container>
+
+ 
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let forfait" class="boutonsAction">
+            <button *ngIf="(selectedForfait && selectedForfait === forfait);else editButton;" color="primary" form="forfaitFormEdition" mat-button>
+                <i class="material-icons">done</i>
+            </button>
+                        
+            <ng-template #editButton>
+                <form (ngSubmit)="onSelect(forfait)">
+                    <button mat-button><i class="material-icons">edit</i></button>
+                </form>
+            </ng-template>
+
+            <form (ngSubmit)="onDelete(forfait)">
+                <button mat-button ><i class="material-icons">delete</i></button>
+            </form>
+        </td>
+    </ng-container>
+
+     
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+
+</table>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,20 @@
-div.prix h3{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  color: #0328A1;
+div.prix {
+  font-family :"Geneva";  
+  color: white;
+  float: right;
   text-align: right;
 }
+
+div.prix h1{  
+  font-weight: 500;
+  color: white;
+  font-size: 30px;  
+}
+
+div.prix h3{  
+  font-weight: 500;
+  color: white;
+  font-size: 15px;  
+  text-decoration:line-through;
+}
+
